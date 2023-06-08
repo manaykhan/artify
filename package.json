@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "use-reducer-logger": "^1.0.2"
+  },
+  "dependencies": {
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6"
+  }
+}
