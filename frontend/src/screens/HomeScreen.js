@@ -4,6 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {Helmet} from 'react-helmet-async';
 import Product from '../components/Product';
 
 const reducer = (state, action) => {
@@ -51,6 +52,9 @@ function HomeScreen() {
 
   return (
     <div>
+      <Helmet>
+        <title>Artify</title>
+      </Helmet>
       <h1>Featured Paintings</h1>
       {loading ? (
         <p>Loading...</p>

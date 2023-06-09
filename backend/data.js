@@ -32,7 +32,7 @@ const data = {
             category: 'Painting',
             image: '/images/img3.jpg',
             price: 150,
-            countInStock: 15,
+            countInStock: 0,
             rating: 4.5,
             numReviews: 10,
             description: 'desc',
