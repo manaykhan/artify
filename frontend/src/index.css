@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* 
 header{
   background-color: #ff5a5f;
   padding: 1rem;
@@ -17,10 +17,14 @@ header a{
   font-weight: bold;
   text-decoration: none;
   font-family: 'Pacifico', cursive;
+} */
+
+.site-container{
+  min-height: 100vh;
 }
 
 main{
-  padding: 1rem;
+  flex: 1;
 }
 
 .products {
