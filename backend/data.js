@@ -1,6 +1,7 @@
 const data = {
     products:[
         {
+            _id: '1',      //using _ to make it compatible with mongoDB 
             name: 'Girl Face Aesthetic Painting',
             slug: 'girl-face-painting-decor',
             category: 'Painting',
@@ -14,6 +15,7 @@ const data = {
         },
 
         {
+            _id: '2',
             name: 'Couple Aesthetic Painting',
             slug: 'couple-painting-decor',
             category: 'Painting',
@@ -27,6 +29,7 @@ const data = {
         },
 
         {
+            _id: '3',
             name: 'Line Art',
             slug: 'line-art',
             category: 'Painting',
@@ -40,6 +43,7 @@ const data = {
         },
 
         {
+            _id: '4',
             name: 'Set of Paintings',
             slug: 'set-of-paintings',
             category: 'Painting',
@@ -53,6 +57,7 @@ const data = {
         },
 
         {
+            _id: '5',
             name: 'Set of 3 Paintings',
             slug: 'set-of-3-paintings',
             category: 'Painting',
@@ -66,6 +71,7 @@ const data = {
         },
 
         {
+            _id: '6',
             name: 'Boho Painting',
             slug: 'boho-painting',
             category: 'Painting',
@@ -79,6 +85,7 @@ const data = {
         },
 
         {
+            _id: '7',
             name: 'Abstract Painting set of 2',
             slug: 'abstract-painting',
             category: 'Painting',
@@ -92,6 +99,7 @@ const data = {
         },
 
         {
+            _id: '8',
             name: 'Boho Abstract set of 5',
             slug: 'boho-abstract-set',
             category: 'Painting',
@@ -105,6 +113,7 @@ const data = {
         },
 
         {
+            _id: '9',
             name: 'Set of Boho Prints',
             slug: 'set-of-boho-prints',
             category: 'Painting',
@@ -118,6 +127,7 @@ const data = {
         },
 
         {
+            _id: '10',
             name: '3pcs Abstract Pattern',
             slug: '3pcs-abstract-pattern',
             category: 'Painting',
