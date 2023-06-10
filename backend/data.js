@@ -1,4 +1,21 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+    users: [
+        {
+          name: 'Mahnoor',
+          email: 'admin@example.com',
+          password: bcrypt.hashSync('11111'),
+          isAdmin: true,
+        },
+        {
+          name: 'Izumi',
+          email: 'user@example.com',
+          password: bcrypt.hashSync('22222'),
+          isAdmin: false,
+        },
+      ],
+
     products:[
         {
             // _id: '1',      //using _ to make it compatible with mongoDB 
