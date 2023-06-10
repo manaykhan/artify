@@ -22,6 +22,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// app.get('/api/keys/easypaisa', (req, res) => {
+//   res.send(process.env.EASYPAISA_CLIENT_ID || 'sb');
+// });
+
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
