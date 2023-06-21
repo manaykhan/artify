@@ -1,7 +1,9 @@
 import { createContext, useReducer } from 'react';
-
+// using hooks
 export const Store = createContext();
 
+// defines initial state of the web
+// retrieves if userinfo cart etc exists otherwise sets it to default
 const initialState = {
   userInfo: localStorage.getItem('userInfo')
     ? JSON.parse(localStorage.getItem('userInfo'))
@@ -19,6 +21,7 @@ const initialState = {
       : [],
   },
 };
+// handles state updates based on dispatched actions
 function reducer(state, action) {
   switch (action.type) {
     case 'CART_ADD_ITEM':
@@ -75,6 +78,7 @@ function reducer(state, action) {
   }
 }
 
+// takes the current state of the application and dispatches actions accordingly
 export function StoreProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = { state, dispatch };

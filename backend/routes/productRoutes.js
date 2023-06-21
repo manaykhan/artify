@@ -2,14 +2,20 @@ import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import Product from '../models/productModel.js';
 
+// creating express instance
 const productRouter = express.Router();
 
+// handles GET request
 productRouter.get('/', async (req, res) => {
+  // method to .find() and fetch the products from DB and send a reponse back
   const products = await Product.find();
   res.send(products);
 });
 
-const PAGE_SIZE = 3;
+const PAGE_SIZE = 3; // only 3 products shown per page when filtered
+
+// search logic and does all the filtering
+// top rated, newly added, most reviews etc
 productRouter.get(
   '/search',
   expressAsyncHandler(async (req, res) => {
@@ -88,6 +94,7 @@ productRouter.get(
   })
 );
 
+// fetch diff categories and awaits the results then sends as JSON via res.send
 productRouter.get(
   '/categories',
   expressAsyncHandler(async (req, res) => {
@@ -96,6 +103,7 @@ productRouter.get(
   })
 );
 
+// GET request handler which uses slug for a product
 productRouter.get('/slug/:slug', async (req, res) => {
   const product = await Product.findOne({ slug: { $eq: req.params.slug } });
   if (product) {
@@ -104,6 +112,8 @@ productRouter.get('/slug/:slug', async (req, res) => {
     res.status(404).send({ message: 'Product Not Found' });
   }
 });
+
+// finds product and sends reponse back accordingly
 productRouter.get('/:id', async (req, res) => {
   const product = await Product.findById(req.params.id);
   if (product) {

@@ -1,5 +1,9 @@
 import jwt from 'jsonwebtoken';
 
+// includes 3 functions: generateToken, isAuth, isAdmin
+// used for verifying and validating users
+
+// generates token using secret key
 export const generateToken = (user) => {
     return jwt.sign(
         {
@@ -10,11 +14,11 @@ export const generateToken = (user) => {
         },
         process.env.JWT_SECRET,
         {
-            expiresIn: '30d',
+            expiresIn: '30d', // expires in a month
         }
     );
 };
-
+// verifies authenticity of user token
 export const isAuth = (req, res, next) => {
     const authorization = req.headers.authorization;
     if (authorization) {
@@ -31,6 +35,8 @@ export const isAuth = (req, res, next) => {
         res.status(401).send({ message: 'No Token' });
     }
 };
+
+// checks whether or not the user has admin rights
 export const isAdmin = (req, res, next) => {
     if (req.user && req.user.isAdmin) {
         next();

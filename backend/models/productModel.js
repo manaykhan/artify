@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+// schema for product
 const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, unique: true },
@@ -17,5 +18,6 @@ const productSchema = new mongoose.Schema(
   }
 );
 
+// mongoose.model() creates a model in mongoDB
 const Product = mongoose.model('Product', productSchema);
 export default Product;

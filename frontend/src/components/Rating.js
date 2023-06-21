@@ -1,5 +1,6 @@
 function Rating(props) {
     const { rating, numReviews, caption } = props;
+    // fa font awesome
     return (
         <div className="rating">
             <span>

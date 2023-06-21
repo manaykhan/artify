@@ -103,6 +103,7 @@ export default function CartScreen() {
                             <ListGroup variant="flush">
                                 <ListGroup.Item>
                                     <h3>
+                                        {/* a = accumulator and c = current item */}
                                         Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
                                         items) : $
                                         {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}

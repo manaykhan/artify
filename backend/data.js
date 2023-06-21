@@ -1,5 +1,7 @@
 import bcrypt from 'bcryptjs';
 
+// data being populated initially in db
+// paswords hashed and encrypted before being saved in db
 const data = {
     users: [
         {
@@ -19,6 +21,7 @@ const data = {
     products:[
         {
             // _id: '1',      //using _ to make it compatible with mongoDB 
+            // ids commented because mongoDB refers each product with its own ID
             name: 'Girl Face Aesthetic Painting',
             slug: 'girl-face-painting-decor',
             category: 'Painting',
@@ -88,7 +91,7 @@ const data = {
         },
 
         {
-            // _id: '6',
+            // _id: '6', 
             name: 'Boho Painting',
             slug: 'boho-painting',
             category: 'Painting',
